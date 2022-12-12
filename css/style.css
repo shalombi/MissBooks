@@ -22,12 +22,13 @@ body {
     padding: 10px;
     color: #f7f3f0;
 }
+
 .app-header {
     height: 10vh;
-    
+
 }
 
-.app-footer{
+.app-footer {
     height: 10vh;
 }
 
@@ -63,7 +64,7 @@ body {
 
 .car-details {
     display: grid;
-    background-color: rgb(104, 143, 154);
+    background-color: rgb(233 237 238);
     padding: 10px;
     margin-block-end: 10px;
 }
@@ -97,7 +98,9 @@ body {
     grid-template-rows: 1fr 0.9fr;
 }
 
-.car-preview h2,.car-preview h3 {
+.car-preview h2,
+.car-preview h3,
+.prev-img {
     display: flex;
     align-items: center;
     justify-content: center;

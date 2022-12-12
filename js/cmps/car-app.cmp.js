@@ -22,33 +22,57 @@ export default {
         <car-edit @saved="carSaved"/>
     </section>
     `,
-    data(){
-        return { 
+
+// filterBy: {
+//     title: '',
+//     price: {
+//         name: 'xx',
+//         fromPrice: 90,
+//         toPrice: Infinity
+//     }
+    data() {
+        return {
             cars: bookService.query(),
             selectedCar: null,
-            filterBy: {},
+            filterBy: {
+
+                title: '',
+                    price: {
+                        name: 'xx',
+                        fromPrice: 90,
+                        toPrice: Infinity}
+            },
+
         }
     },
     methods: {
-        removeCar(carId){
+        removeCar(carId) {
             bookService.remove(carId)
 
             const idx = this.cars.findIndex(car => car.id === carId)
             this.cars.splice(idx, 1)
         },
-        selectCar(car){
+        selectCar(car) {
             this.selectedCar = car
         },
-        carSaved(car){
+        carSaved(car) {
             this.cars.push(car)
         },
-        filter(filterBy){
+        filter(filterBy) {
             console.log(filterBy);
             this.filterBy = filterBy
         }
     },
     computed: {
-        carsToShow(){
+        carsToShow() {
+            // if()
+            // const regex = new RegExp(this.filterBy.price.fromPrice, 'i')
+            // if(  this.filterBy.price.fromPrice)
+            // car.listPrice.amount
+            // const regex = new RegExp(this.filterBy.price.fromPrice, 'i')
+
+
+
             const regex = new RegExp(this.filterBy.title, 'i')
             return this.cars.filter(car => regex.test(car.title))
         }
