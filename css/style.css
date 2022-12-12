@@ -60,12 +60,18 @@ select {
 
 }
 
-.header-text {
-
+.header-text,
+.footer-text {
     font-size: 30px;
-    margin-left: 20px;
     color: rgb(253, 254, 255);
+    margin-left: 20px;
 }
+
+.footer-text {
+    font-size: 25px;
+    color: rgb(231, 231, 231);
+}
+
 
 .header-dot {
     color: rgb(255, 148, 42);
