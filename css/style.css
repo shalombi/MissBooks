@@ -18,13 +18,23 @@ body {
 
 /* header and footer */
 .app-header img {
-    max-width: 80px;
+    /* max-width: 80px; */
     margin-left: 10px;
     margin-left: 10px;
-    
+    height: 8vh;
+
     border-radius: 10px;
 
 
+}
+
+.header-text {
+    margin-left: 20px;
+}
+
+.header-dot {
+    color: rgb(255, 148, 42);
+    font-size: 40px;
 }
 
 .app-footer,
