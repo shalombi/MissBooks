@@ -8,7 +8,7 @@ import carList from './car-list.cmp.js'
 export default {
     template: `
     <section class="car-app">
-        <car-filter @filter="filter"/>
+        <car-filter  @filter="filter"/>
         <car-list 
             @selected="selectCar" 
             @remove="removeCar" 
@@ -22,14 +22,7 @@ export default {
         <car-edit @saved="carSaved"/>
     </section>
     `,
-
-// filterBy: {
-//     title: '',
-//     price: {
-//         name: 'xx',
-//         fromPrice: 90,
-//         toPrice: Infinity
-//     }
+    // v-if="filterBy.price.fromPrice"
     data() {
         return {
             cars: bookService.query(),
@@ -37,10 +30,11 @@ export default {
             filterBy: {
 
                 title: '',
-                    price: {
-                        name: 'xx',
-                        fromPrice: 90,
-                        toPrice: Infinity}
+                price: {
+                    name: 'xx',
+                    fromPrice: 0,
+                    toPrice: Infinity
+                }
             },
 
         }
@@ -65,16 +59,25 @@ export default {
     },
     computed: {
         carsToShow() {
-            // if()
+            // if()//toPrice
             // const regex = new RegExp(this.filterBy.price.fromPrice, 'i')
-            // if(  this.filterBy.price.fromPrice)
+            // if(this.cars.filter(car => car.listPrice.amount >= this.filterBy.price.fromPrice )    this.filterBy.price.fromPrice)
             // car.listPrice.amount
             // const regex = new RegExp(this.filterBy.price.fromPrice, 'i')
-
-
+            // console.log(filteredByPrice, '^^^filtered by price^^^')
 
             const regex = new RegExp(this.filterBy.title, 'i')
-            return this.cars.filter(car => regex.test(car.title))
+
+            if (this.filterBy.price.fromPrice) {
+                const filteredByPrice = this.cars.filter(car => {
+                    return (car.listPrice.amount >= this.filterBy.price.fromPrice) && (car.listPrice.amount <= this.filterBy.price.toPrice) && ( regex.test(car.title))
+                })
+                return filteredByPrice
+            }
+            else {
+                const regex = new RegExp(this.filterBy.title, 'i')
+                return this.cars.filter(car => regex.test(car.title))
+            }
         }
     },
     components: {

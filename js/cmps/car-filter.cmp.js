@@ -18,6 +18,14 @@ export default {
                     type="number" 
                     placeholder="from price">
             </section>
+            to price: 
+            <input 
+                    @input="filter"
+                    v-model="filterBy.price.toPrice" 
+                    type="number" 
+                    placeholder="to price">
+            </section>
+
     `,
     data() {
         return {
@@ -25,7 +33,7 @@ export default {
                 title: '',
                 price: {
                     name: 'xx',
-                    fromPrice: 90,
+                    fromPrice: 0,
                     toPrice: Infinity
                 }
 
