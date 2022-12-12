@@ -10,16 +10,20 @@ h3,
 h4,
 h5,
 h6,
-p,
-
+p {
+    margin: 0;
+}
 
 body {
-    margin: 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+button {
+    cursor: pointer;
+}
 
-input {
+input,
+select {
     background: #313131;
     border-radius: 4px;
     color: #f7f3f0;
@@ -153,6 +157,28 @@ input {
     font-size: 24px;
     color: #fbf2f2;
     margin: 7px;
+}
+
+.save-btn {
+    min-width: 40px;
+    background: #241818;
+    border-radius: 5px;
+    margin-top: 4px;
+    height: 28px;
+    font-size: 18px;
+    color: #f4efef;
+}
+
+.save-btn:hover {
+    background-color: #333333;
+
+}
+
+.book-edit form {
+    display: flex;
+    flex-direction: column;
+    max-width: 65px;
+    gap: 6px;
 }
 
 /* book-preview cmp */
