@@ -155,6 +155,12 @@ select {
     padding: 15px;
 }
 
+.book-details .saleImg {
+    justify-self: left;
+    max-width: 100px;
+    margin-left: 1%;
+}
+
 /* .book-details img:hover { */
 /* rotate: -10deg; */
 /* } */
@@ -183,9 +189,9 @@ select {
     margin: 7px;
 }
 
-.save-btn {
+button {
     min-width: 40px;
-    background: #241818;
+    background: #2f2121;
     border-radius: 5px;
     margin-top: 4px;
     height: 28px;
@@ -193,9 +199,10 @@ select {
     color: #f4efef;
 }
 
-.save-btn:hover {
-    background-color: #333333;
-
+button:hover,
+select:hover {
+    background-color: #625f5f;
+    cursor: pointer;
 }
 
 .book-edit form {

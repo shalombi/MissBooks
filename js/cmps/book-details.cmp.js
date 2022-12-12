@@ -17,21 +17,25 @@ export default {
                 {{publishedDateDesc}}
             </h2>
             
+            
+            <img class="saleImg" :src="setUrlImgSale"/>
             <img :src="book.thumbnail" alt="">
             <h2 class="price">price:<span :class="priceStyle">{{ book.listPrice.amount }} {{ book.listPrice.currencyCode }} </span> </h2>
+
+
+
             <button @click="$emit('close')">Close</button>
         </section>
     `,
-
-    // computed: {
-    //     counterStyle(){
-    //         return { low: this.counter < 3, high: this.counter > 7 }
-    //     }
     data() {
         return {
             descPublished: {
                 new: 'New!',
                 veteran: 'Veteran Book'
+            },
+            saleImgURL: {
+                available: '../../img/available.png',
+                soldOut: '../../img/sold-out-rubber-stamp.jpeg'
             }
         }
     },
@@ -59,7 +63,11 @@ export default {
         },
         priceStyle() {
             return { red: this.book.listPrice.amount >= 65, green: this.book.listPrice.amount < 65 }
-            //         return { low: this.counter < 3, high: this.counter > 7 }
+        },
+        setUrlImgSale() {
+            return this.book.listPrice.isOnSale ? this.saleImgURL.available : this.saleImgURL.soldOut
         }
+
+
     }
 }
