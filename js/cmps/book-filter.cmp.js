@@ -28,6 +28,7 @@ export default {
                     v-model="filterBy.price.toPrice" 
                     type="number" 
                     placeholder="to price">
+            </div >
 
             </section>
 

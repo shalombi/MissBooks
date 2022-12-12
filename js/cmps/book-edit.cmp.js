@@ -25,14 +25,13 @@ export default {
                 <div>
                     <button class="save-btn">Save</button>
                 </div>
-                
+
             </form>
         </section>
     `,
     data() {
         return {
             bookToEdit: bookService.getEmptyBook(),
-            // selected: '$'
         }
     },
     methods: {

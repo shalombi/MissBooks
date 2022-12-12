@@ -10,10 +10,14 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+body {
     margin: 0;
 }
 
+
+
+/* general */
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -30,6 +34,19 @@ select {
     height: 27px;
     font-size: 15px;
 }
+
+/* helpers */
+
+.red {
+    color: rgb(224, 29, 29);
+}
+
+.green {
+    color: green;
+}
+
+
+/* classes */
 
 /* header and footer */
 .app-header img {
@@ -131,19 +148,26 @@ select {
     width: 200px;
     margin-top: 20px;
     justify-self: center;
-    transition: rotate 1s;
+    /* transition: rotate 1s; */
 }
 
 .book-details span {
     padding: 15px;
 }
 
-.book-details img:hover {
-    rotate: -10deg;
+/* .book-details img:hover { */
+/* rotate: -10deg; */
+/* } */
+.info-book {
+    color: orange;
 }
 
 .book-details .price {
     text-align: center;
+}
+
+.price {
+    margin-top: 24px;
 }
 
 /* book-edit cmp */

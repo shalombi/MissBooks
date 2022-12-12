@@ -1,7 +1,8 @@
 export const utilService = {
     saveToStorage,
     loadFromStorage,
-    makeId
+    makeId,
+    
 }
 
 function saveToStorage(key, value) {
@@ -21,3 +22,5 @@ function makeId(length = 5) {
     }
     return txt
 }
+
+

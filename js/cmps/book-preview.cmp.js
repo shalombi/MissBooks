@@ -9,7 +9,7 @@ export default {
     `,
     data() {
         return {
-            book: this.book
+            // book: this.book
         }
     },
     computed: {
@@ -17,8 +17,7 @@ export default {
             const strCurrency = this.book.listPrice.currencyCode
             if (strCurrency === 'ILS') return ('₪')
             if (strCurrency === 'EUR') return ('€')
-            if (strCurrency === 'USD') return ('$')
-            
+            if (strCurrency === 'USD') return ('$')  
         }
     }
 
