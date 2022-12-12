@@ -14,6 +14,8 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+/* header and footer */
+
 .app-footer,
 .app-header {
     display: flex;
@@ -25,20 +27,28 @@ body {
 
 .app-header {
     height: 10vh;
-
 }
 
 .app-footer {
     height: 10vh;
 }
 
+/* app */
 
+.car-filter {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 180px));
+}
+
+/* car-app cmp */
 
 .car-app {
     min-height: 80vh;
     background-color: darkorange;
     padding: 10px;
 }
+
+/* car-list cmp */
 
 .car-list ul {
     display: grid;
@@ -62,6 +72,9 @@ body {
     margin-top: 15px;
 }
 
+/* car-details cmp */
+
+
 .car-details {
     display: grid;
     background-color: rgb(233 237 238);
@@ -75,18 +88,32 @@ body {
 
 .car-details img {
     width: 200px;
-    justify-self: end;
+    margin-top: 20px;
+    justify-self: center;
     transition: rotate 1s;
+}
+
+.car-details span {
+    padding: 15px;
 }
 
 .car-details img:hover {
     rotate: -10deg;
 }
 
+.car-details .price {
+    text-align: center;
+}
+
+/* car-edit cmp */
+
 .car-edit {
     background-color: rgb(58 58 58);
     padding: 10px;
 }
+
+
+/* car-preview cmp */
 
 .prev-img {
     max-width: 120px;

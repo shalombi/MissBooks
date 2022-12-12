@@ -2,29 +2,35 @@ export default {
     template: `
 
             <section class="car-filter">
-            Search title:
+
+            <div>
+                Search title:
              <input 
                     @input="filter"
                     v-model="filterBy.title" 
                     type="text" 
                     placeholder="Search title">
-            </section>
+            </div>
 
-            <section class="car-filter">
+            <div >
             from price: 
             <input 
                     @input="filter"
                     v-model="filterBy.price.fromPrice" 
                     type="number" 
                     placeholder="from price">
-            </section>
+            </div>
+
+            <div >
             to price: 
             <input 
                     @input="filter"
                     v-model="filterBy.price.toPrice" 
                     type="number" 
                     placeholder="to price">
+
             </section>
+
 
     `,
     data() {

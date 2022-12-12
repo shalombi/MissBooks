@@ -2,15 +2,18 @@ export default {
     props: ['car'],
     template: `
         <section class="car-details">
-            <span>{{ car.description }}</span>
-            <h3>{{ car.maxSpeed }}</h3>
-            <img :src="imgUrl" alt="">
+            <h2>{{ car.description }}</h2>
+            
+            <!-- <pre>{{car}}</pre> -->
+            <img :src="car.thumbnail" alt="">
+            <h2 class="price">price: {{ car.listPrice.amount }} ILS</h2>
             <button @click="$emit('close')">Close</button>
         </section>
     `,
     computed: {
         imgUrl() {
-            return `../../img/${this.car.vendor}.png`
+            // return `../../img/${this.car.vendor}.png`
+            return `car.thumbnail`
         }
     }
 }
