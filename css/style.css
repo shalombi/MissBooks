@@ -56,22 +56,22 @@ body {
 
 /* app */
 
-.car-filter {
+.book-filter {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(50px, 180px));
 }
 
-/* car-app cmp */
+/* book-app cmp */
 
-.car-app {
+.book-app {
     min-height: 80vh;
     background-color: darkorange;
     padding: 10px;
 }
 
-/* car-list cmp */
+/* book-list cmp */
 
-.car-list ul {
+.book-list ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px;
@@ -80,7 +80,7 @@ body {
     padding: 10px;
 }
 
-.car-list ul li {
+.book-list ul li {
     display: grid;
     background-color: rgb(29, 36, 36);
     padding: 10px;
@@ -93,61 +93,61 @@ body {
     margin-top: 15px;
 }
 
-/* car-details cmp */
+/* book-details cmp */
 
 
-.car-details {
+.book-details {
     display: grid;
     background-color: rgb(233 237 238);
     padding: 10px;
     margin-block-end: 10px;
 }
 
-.car-details button {
+.book-details button {
     justify-self: end;
 }
 
-.car-details img {
+.book-details img {
     width: 200px;
     margin-top: 20px;
     justify-self: center;
     transition: rotate 1s;
 }
 
-.car-details span {
+.book-details span {
     padding: 15px;
 }
 
-.car-details img:hover {
+.book-details img:hover {
     rotate: -10deg;
 }
 
-.car-details .price {
+.book-details .price {
     text-align: center;
 }
 
-/* car-edit cmp */
+/* book-edit cmp */
 
-.car-edit {
+.book-edit {
     background-color: rgb(58 58 58);
     padding: 10px;
 }
 
 
-/* car-preview cmp */
+/* book-preview cmp */
 
 .prev-img {
     max-width: 120px;
     /* border-radius: 6px; */
 }
 
-.car-preview {
+.book-preview {
     display: grid;
     grid-template-rows: 1fr 0.9fr;
 }
 
-.car-preview h2,
-.car-preview h3,
+.book-preview h2,
+.book-preview h3,
 .prev-img {
     display: flex;
     align-items: center;

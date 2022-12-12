@@ -1,7 +1,7 @@
 export default {
     template: `
 
-            <section class="car-filter">
+            <section class="book-filter">
 
             <div>
                 Search title:
