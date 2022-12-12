@@ -29,7 +29,10 @@ body {
 }
 
 .header-text {
+
+    font-size: 30px;
     margin-left: 20px;
+    color: rgb(253, 254, 255);
 }
 
 .header-dot {
@@ -98,9 +101,11 @@ body {
 
 .book-details {
     display: grid;
-    background-color: rgb(233 237 238);
+    /* background-color: rgb(233 237 238); */
     padding: 10px;
     margin-block-end: 10px;
+    background: #262626;
+    color: #ececec;
 }
 
 .book-details button {
@@ -133,6 +138,11 @@ body {
     padding: 10px;
 }
 
+.book-edit-headline {
+    font-size: 24px;
+    color: #fbf2f2;
+    margin: 7px;
+}
 
 /* book-preview cmp */
 
@@ -153,4 +163,13 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+/*  */
+
+input {
+    background: #313131;
+    border-radius: 4px;
+    color: #f7f3f0;
+    height: 22px;
 }

@@ -31,7 +31,16 @@ function save(book) {
 }
 
 function getEmptyBook() {
-    return { id: '', vendor: '', maxSpeed: 0 }
+    return {
+        id: '',
+        title: '',
+        thumbnail: (Math.random() > 0.5) ? "http://coding-academy.org/books-photos/11.jpg" : "http://coding-academy.org/books-photos/10.jpg",
+        listPrice: {
+            amount: '',
+            currencyCode: "EUR",
+            isOnSale: true
+        }
+    }
 }
 
 function _createBooks() {
